@@ -1,6 +1,11 @@
-FROM node:16
+FROM ubuntu:24.04
 
 WORKDIR /usr/src/app
+
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
+    apt-get install -y nodejs
 
 COPY package*.json ./
 
