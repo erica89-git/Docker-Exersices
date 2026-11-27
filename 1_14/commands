@@ -1,5 +1,5 @@
-docker build -t example-frontend -f 1_14/Dockerfile.frontend .
-docker build -t example-backend -f 1_14/Dockerfile.backend .
+docker build -t example-frontend -f Dockerfile.frontend ..
+docker build -t example-backend -f Dockerfile.backend ..
 
 docker run -d -p 5001:5001 example-frontend
 docker run -d -p 8080:8080 example-backend
